@@ -50,6 +50,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -121,9 +122,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigReader\AppConfigReader.cs" />
+    <Compile Include="POM\SignInPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\TestsExe.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -132,7 +137,6 @@
   <ItemGroup>
     <Folder Include="BDD\Gherkin\" />
     <Folder Include="BDD\Steps\" />
-    <Folder Include="POM\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.81.0.4044.13800\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.81.0.4044.13800\build\Selenium.WebDriver.ChromeDriver.targets')" />
